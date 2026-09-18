@@ -13,8 +13,8 @@ Tres enfoques de implementación para los mismos 5 algoritmos: **recursivo direc
 | [`package.json`](package.json) | Manifiesto npm — script `test` y dependencia de desarrollo `jest`. |
 | [`jest.config.js`](jest.config.js) | Configuración de Jest — `testEnvironment: "node"` y búsqueda en `test/**/*.test.js`. |
 | [`src/numbers.js`](src/numbers.js) | Módulo `numbers` — 15 funciones (3 enfoques × 5 algoritmos) + 4 helpers privados (no exportados). |
-| [`test/numbers.rec.test.js`](test/numbers.rec.test.js) | 11 pruebas para el enfoque recursivo directo. |
-| [`test/numbers.ite.test.js`](test/numbers.ite.test.js) | 11 pruebas para el enfoque iterativo. |
+| [`test/numbers.rec.test.js`](test/numbers.rec.test.js) | 5 pruebas para el enfoque recursivo directo (11 casos). |
+| [`test/numbers.ite.test.js`](test/numbers.ite.test.js) | 5 pruebas para el enfoque iterativo (11 casos). |
 | [`.gitignore`](.gitignore) | Ignora `node_modules/`. |
 
 **Estructura de directorios esperada:**
@@ -27,8 +27,8 @@ numbers/
 ├── src/
 │   └── numbers.js                   # 15 funciones + 4 helpers privados
 ├── test/
-│   ├── numbers.rec.test.js          # Tests recursivos (11 casos)
-│   └── numbers.ite.test.js          # Tests iterativos (11 casos)
+│   ├── numbers.rec.test.js          # Tests recursivos (5 tests, 11 casos)
+│   └── numbers.ite.test.js          # Tests iterativos (5 tests, 11 casos)
 └── node_modules/                    # Generado por npm install (no versionado)
 ```
 
@@ -111,12 +111,14 @@ const fibonacciIte = (n) => {
 
 ### `test/numbers.rec.test.js` y `test/numbers.ite.test.js` — Pruebas
 
-**ES:** Un `test` por caso (11 por suite, 22 en total), con los valores de la tabla de casos de prueba de la especificación.
+**ES:** Un `test` por función (5 por suite), que agrupa sus casos como `expect` múltiples (11 casos por suite, 22 en total), con los valores de la tabla de casos de prueba de la especificación.
 
-**EN:** One `test` per case (11 per suite, 22 in total), with the values from the specification's test case table.
+**EN:** One `test` per function (5 per suite), grouping its cases as multiple `expect`s (11 cases per suite, 22 in total), with the values from the specification's test case table.
 
 ```javascript
-test("fibonacciRec(6) should equal 8", () => {
+test("fibonacciRec", () => {
+    expect(fibonacciRec(0)).toBe(0);
+    expect(fibonacciRec(1)).toBe(1);
     expect(fibonacciRec(6)).toBe(8);
 });
 ```
@@ -147,8 +149,11 @@ npm test
 
 ```text
 Test Suites: 2 passed, 2 total
-Tests:       22 passed, 22 total
+Tests:       10 passed, 10 total
 ```
+
+> **ES:** Jest cuenta 10 `test` (5 por suite); los 22 casos viven como `expect` dentro de ellos.
+> **EN:** Jest counts 10 `test`s (5 per suite); the 22 cases live as `expect`s within them.
 
 ---
 
