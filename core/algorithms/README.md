@@ -11,6 +11,7 @@ Los módulos de esta fase trabajan sobre `number[]`, que en JavaScript **es muta
 | Módulo | Especificación | Enfoque | Tests | Estado |
 |--------|---------------|---------|:-----:|:------:|
 | [`naive_sort/`](naive_sort/) | [05_Naive_Sort](https://yorche3.github.io/programming_languages/core/algorithms/05_Naive_Sort/) | `npm test` + Jest | 3 | ✅ |
+| [`data_structures_basics/`](data_structures_basics/) | [06_Data_Structures_Basics](https://yorche3.github.io/programming_languages/core/algorithms/06_Data_Structures_Basics/) | `npm test` + Jest (ESM) | 4 | ✅ |
 
 ---
 
@@ -27,6 +28,20 @@ algorithms/
     │   └── naive_sort.js            # selectionSort, bubbleSort, insertionSort
     ├── test/
     │   └── naive_sort.test.js       # 3 tests × (7 casos + caso nulo)
+    └── README.md
+
+└── data_structures_basics/          # 06_Data_Structures_Basics
+    ├── package.json
+    ├── package-lock.json
+    ├── jest.config.js
+    ├── index.js                     # barril: Node, LinkedList, Stack, Queue
+    ├── src/
+    │   ├── Node.js
+    │   ├── LinkedList.js
+    │   ├── Stack.js
+    │   └── Queue.js
+    ├── test/
+    │   └── data_structures_basics.test.js  # 4 tests (uno por ADT)
     └── README.md
 ```
 
@@ -57,6 +72,11 @@ algorithms/
 ```bash
 # Naive Sort Tests
 cd naive_sort
+npm install
+npm test
+
+# Data Structures Basics Tests
+cd ../data_structures_basics
 npm install
 npm test
 ```
