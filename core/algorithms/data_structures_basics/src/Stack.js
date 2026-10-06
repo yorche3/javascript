@@ -23,17 +23,17 @@ export class Stack {
 
     /** @returns {number} valor del tope, o -1 si la pila está vacía (peek) */
     get topValue() {
-        return -1;
+        return this.#top != null ? this.#top.value : -1;
     }
 
     /** @returns {boolean} informa si la pila no tiene nodos (is_empty) */
     get isEmpty() {
-        return false;
+        return this.#count == 0;
     }
 
     /** @returns {number} número de nodos de la pila (size) */
     get size() {
-        return 0;
+        return this.#count;
     }
 
     /**
@@ -41,6 +41,10 @@ export class Stack {
      * @param {number} value
      */
     push(value) {
+        const newNode = new Node(value);
+        newNode.next = this.#top;
+        this.#top = newNode;
+        this.#count++;
     }
 
     /**
@@ -48,6 +52,12 @@ export class Stack {
      * @returns {number} el valor extraído, o -1 si la pila está vacía
      */
     pop() {
-        return -1;
+        if (this.#top == null) {
+            return -1;
+        }
+        const value = this.#top.value;
+        this.#top = this.#top.next;
+        this.#count--;
+        return value;
     }
 }

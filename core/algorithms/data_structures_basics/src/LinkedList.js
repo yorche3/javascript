@@ -25,17 +25,17 @@ export class LinkedList {
 
     /** @returns {number} valor de la cabeza, o -1 si la lista está vacía (get_head) */
     get headValue() {
-        return -1;
+        return this.#head != null ? this.#head.value : -1;
     }
 
     /** @returns {boolean} informa si la lista no tiene nodos (is_empty) */
     get isEmpty() {
-        return false;
+        return this.#count == 0;
     }
 
     /** @returns {number} número de nodos de la lista (size) */
     get size() {
-        return 0;
+        return this.#count;
     }
 
     /**
@@ -43,6 +43,13 @@ export class LinkedList {
      * @param {number} value
      */
     insertHead(value) {
+        const newNode = new Node(value);
+        newNode.next = this.#head;
+        this.#head = newNode;
+        if (this.#tail == null) {
+            this.#tail = newNode;
+        }
+        this.#count++;
     }
 
     /**
@@ -50,6 +57,15 @@ export class LinkedList {
      * @param {number} value
      */
     insertTail(value) {
+        const newNode = new Node(value);
+        if (this.#tail == null) {
+            this.#head = newNode;
+            this.#tail = newNode;
+        } else {
+            this.#tail.next = newNode;
+            this.#tail = newNode;
+        }
+        this.#count++;
     }
 
     /**
@@ -58,6 +74,29 @@ export class LinkedList {
      * @returns {boolean} false cuando el valor no está
      */
     delete(value) {
-        return false;
+        if (this.#head == null) {
+            return false;
+        }
+        if (this.#head.value == value) {
+            this.#head = this.#head.next;
+            if (this.#head == null) {
+                this.#tail = null;
+            }
+            this.#count--;
+            return true;
+        }
+        let current = this.#head;
+        while (current.next != null && current.next.value != value) {
+            current = current.next;
+        }
+        if (current.next == null) {
+            return false;
+        }
+        current.next = current.next.next;
+        if (current.next == null) {
+            this.#tail = current;
+        }
+        this.#count--;
+        return true;
     }
 }

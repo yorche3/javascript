@@ -25,17 +25,17 @@ export class Queue {
 
     /** @returns {number} valor del frente, o -1 si la cola está vacía (peek) */
     get frontValue() {
-        return -1;
+        return this.#front != null ? this.#front.value : -1;
     }
 
     /** @returns {boolean} informa si la cola no tiene nodos (is_empty) */
     get isEmpty() {
-        return false;
+        return this.#count == 0;
     }
 
     /** @returns {number} número de nodos de la cola (size) */
     get size() {
-        return 0;
+        return this.#count;
     }
 
     /**
@@ -43,6 +43,15 @@ export class Queue {
      * @param {number} value
      */
     enqueue(value) {
+        const newNode = new Node(value);
+        if (this.#rear == null) {
+            this.#front = newNode;
+            this.#rear = newNode;
+        } else {
+            this.#rear.next = newNode;
+            this.#rear = newNode;
+        }
+        this.#count++;
     }
 
     /**
@@ -50,6 +59,15 @@ export class Queue {
      * @returns {number} el valor extraído, o -1 si la cola está vacía
      */
     dequeue() {
-        return -1;
+        if (this.#front == null) {
+            return -1;
+        }
+        const value = this.#front.value;
+        this.#front = this.#front.next;
+        if (this.#front == null) {
+            this.#rear = null;
+        }
+        this.#count--;
+        return value;
     }
 }
