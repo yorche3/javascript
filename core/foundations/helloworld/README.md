@@ -71,6 +71,15 @@ Hello, World! from JavaScript!
 
 ---
 
+## 📝 Notas de implementación / Implementation Notes
+
+- **ES:** Node.js evalúa el archivo como un script CommonJS: no hay compilación previa ni dependencias externas.
+- **EN:** Node.js evaluates the file as a CommonJS script: there is no build step and no external dependencies.
+- **ES:** `console.log` escribe en la salida estándar y añade un salto de línea al final.
+- **EN:** `console.log` writes to standard output and appends a newline.
+
+---
+
 ## 🌐 Otras implementaciones / Other implementations
 
 Este proyecto también está implementado en otros lenguajes. Explora el [repositorio principal](https://github.com/yorche3/programming_languages) para ver todas las versiones.
