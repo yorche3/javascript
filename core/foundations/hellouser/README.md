@@ -52,7 +52,7 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-rl.question("What is your name? ", (name) => {
+rl.question("Enter your name: ", (name) => {
     console.log("Hello, " + name + "!");
     rl.close();
 });
@@ -80,7 +80,7 @@ node HelloUser.js
 ### Salida esperada / Expected output
 
 ```text
-What is your name? John
+Enter your name: John
 Hello, John!
 ```
 
