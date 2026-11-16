@@ -206,23 +206,23 @@ Ran all test suites.
 | **TreeNode:** Recorrer cada enlace / Traverse each link | Sí | `test/data_structures_advanced.test.js:76` | `traverse each link` |
 | **TreeNode:** Desenlazar hijos / Unlink children | Sí | `test/data_structures_advanced.test.js:89` | `unlink children` |
 | **TreeNode:** Adaptación inmutable / Immutable adaptation | Omitido | N/A | No aplica: `TreeNode` en JavaScript es mutable y modifica enlaces in-place. / Not applicable: `TreeNode` in JS is mutable and mutates links in-place. |
-| **BinaryTree:** Crear vacío / Create empty | Sí | `test/data_structures_advanced.test.js:108` | `create empty` |
-| **BinaryTree:** Insertar la raíz / Insert the root | Sí | `test/data_structures_advanced.test.js:115` | `insert the root` |
-| **BinaryTree:** Insertar menor y mayor / Insert lower and higher | Sí | `test/data_structures_advanced.test.js:124` | `insert lower and higher` |
-| **BinaryTree:** Ramas de varios niveles / Multilevel branches | Sí | `test/data_structures_advanced.test.js:133` | `multilevel branches` |
-| **BinaryTree:** Valor ausente en árbol no vacío / Missing value in nonempty tree | Sí | `test/data_structures_advanced.test.js:143` | `missing value in nonempty tree` |
-| **BinaryTree:** Duplicado idempotente / Idempotent duplicate | Sí | `test/data_structures_advanced.test.js:151` | `idempotent duplicate` |
-| **BinaryTree:** Inserciones ordenadas / Ordered insertions | Sí | `test/data_structures_advanced.test.js:160` | `ordered insertions` |
-| **Graph:** Crear vacío / Create empty | Sí | `test/data_structures_advanced.test.js:174` | `create empty` |
-| **Graph:** Vértice aislado / Isolated vertex | Sí | `test/data_structures_advanced.test.js:184` | `isolated vertex` |
-| **Graph:** Etiquetas no consecutivas y arista dirigida / Nonconsecutive labels and directed edge | Sí | `test/data_structures_advanced.test.js:193` | `nonconsecutive labels and directed edge` |
-| **Graph:** Vértice duplicado conserva adyacencia / Duplicate vertex preserves adjacency | Sí | `test/data_structures_advanced.test.js:203` | `duplicate vertex preserves adjacency` |
-| **Graph:** Arista duplicada / Duplicate edge | Sí | `test/data_structures_advanced.test.js:213` | `duplicate edge` |
-| **Graph:** Extremo inexistente sin mutación / Missing endpoint without mutation | Sí | `test/data_structures_advanced.test.js:223` | `missing endpoint without mutation` |
-| **Graph:** Vecinos ordenados y contadores / Sorted neighbours and counts | Sí | `test/data_structures_advanced.test.js:250` | `sorted neighbours and counts` |
-| **Graph:** Consulta de arista ausente / Missing-edge query | Sí | `test/data_structures_advanced.test.js:267` | `missing-edge query` |
-| **Graph:** Vecinos de vértice inexistente / Neighbours of missing vertex | Sí | `test/data_structures_advanced.test.js:275` | `neighbours of missing vertex` |
-| **Graph:** Bucle y duplicado / Self-loop and duplicate | Sí | `test/data_structures_advanced.test.js:283` | `self-loop and duplicate` |
+| **BinaryTree:** Crear vacío / Create empty | Sí | `test/data_structures_advanced.test.js:111` | `create empty` |
+| **BinaryTree:** Insertar la raíz / Insert the root | Sí | `test/data_structures_advanced.test.js:119` | `insert the root` |
+| **BinaryTree:** Insertar menor y mayor / Insert lower and higher | Sí | `test/data_structures_advanced.test.js:128` | `insert lower and higher` |
+| **BinaryTree:** Ramas de varios niveles / Multilevel branches | Sí | `test/data_structures_advanced.test.js:139` | `multilevel branches` |
+| **BinaryTree:** Valor ausente en árbol no vacío / Missing value in nonempty tree | Sí | `test/data_structures_advanced.test.js:151` | `missing value in nonempty tree` |
+| **BinaryTree:** Duplicado idempotente / Idempotent duplicate | Sí | `test/data_structures_advanced.test.js:160` | `idempotent duplicate` |
+| **BinaryTree:** Inserciones ordenadas / Ordered insertions | Sí | `test/data_structures_advanced.test.js:171` | `ordered insertions` |
+| **Graph:** Crear vacío / Create empty | Sí | `test/data_structures_advanced.test.js:188` | `create empty` |
+| **Graph:** Vértice aislado / Isolated vertex | Sí | `test/data_structures_advanced.test.js:197` | `isolated vertex` |
+| **Graph:** Etiquetas no consecutivas y arista dirigida / Nonconsecutive labels and directed edge | Sí | `test/data_structures_advanced.test.js:206` | `nonconsecutive labels and directed edge` |
+| **Graph:** Vértice duplicado conserva adyacencia / Duplicate vertex preserves adjacency | Sí | `test/data_structures_advanced.test.js:215` | `duplicate vertex preserves adjacency` |
+| **Graph:** Arista duplicada / Duplicate edge | Sí | `test/data_structures_advanced.test.js:224` | `duplicate edge` |
+| **Graph:** Extremo inexistente sin mutación / Missing endpoint without mutation | Sí | `test/data_structures_advanced.test.js:233` | `missing endpoint without mutation` |
+| **Graph:** Vecinos ordenados y contadores / Sorted neighbours and counts | Sí | `test/data_structures_advanced.test.js:251` | `sorted neighbours and counts` |
+| **Graph:** Consulta de arista ausente / Missing-edge query | Sí | `test/data_structures_advanced.test.js:268` | `missing-edge query` |
+| **Graph:** Vecinos de vértice inexistente / Neighbours of missing vertex | Sí | `test/data_structures_advanced.test.js:276` | `neighbours of missing vertex` |
+| **Graph:** Bucle y duplicado / Self-loop and duplicate | Sí | `test/data_structures_advanced.test.js:284` | `self-loop and duplicate` |
 | **Graph:** Aislamiento del resultado de vecinos / Neighbour-result isolation | Sí | `test/data_structures_advanced.test.js:294` | `neighbour-result isolation` |
 
 **Trazabilidad y agrupación lógica / Traceability & Logical grouping:**
